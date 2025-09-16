@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(29, 68, 242);
+}
+
+/* Global button styling */
+button {
+  height: 3rem;
+  color: white;
+  background-color: rgb(50, 50, 50);
+  border-radius: 5rem;
+  align-self: center;
+  border: none;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Global avatar image styling */
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+div#container {
+  display: grid;
+  grid-template-columns: 17fr 30fr 20fr;
+  /* width: 100%; */
+  height: 100%;
+
+  /************  NAV  **************/
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    a {
+      font-size: 1.3rem;
+      color: rgb(36, 31, 31);
+      padding-bottom: 1rem;
+
+      /* &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 5rem;
+      } */
+    }
+    button {
+      width: 100%;
+      max-width: 20vw;
+    }
+    div {
+      margin-top: auto;
+      padding: 0.5rem 1rem;
+    }
+    .profile-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    div .more {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /************  MAIN  **************/
+  main {
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid rgb(230, 230, 230);
+    border-right: 1px solid rgb(230, 230, 230);
+    /* div {
+      font-size: 20rem;
+    } */
+
+    /************** WHAT'S HAPPENING STYLES *************/
+    .post-something {
+      border-block: 1px solid rgba(0, 0, 0, 0.11);
+      padding: 1.2rem 1rem 0.5rem 1rem;
+    }
+    .post-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .post-actions-icons {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      font-size: 1.3rem;
+      color: rgb(29, 68, 242);
+    }
+    .post-actions button {
+      width: 5rem;
+      max-width: 100%;
+      margin-left: auto;
+      margin-top: 0;
+      display: block;
+      background-color: rgb(151, 149, 149);
+    }
+    div .post-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /************** REPOST STYLES **************/
+
+    .post.post-repost {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    }
+
+    /************** ORIGINAL POST (IN REPOST) STYLES **************/
+    .original-post {
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      padding: 1rem;
+      border-radius: 0.6rem;
+      margin: 1rem;
+    }
+    .original-post-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding-bottom: 1rem;
+      font-size: 0.92em;
+    }
+    .original-post-header .avatar {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+    }
+    .original-post-header .post-author,
+    .original-post-header .post-handle,
+    .original-post-header .post-repost-label {
+      font-size: 0.95em;
+    }
+
+    /************** REPOST REACTIONS STYLES ************** */
+
+    .post-reactions {
+      display: flex;
+      justify-content: center;
+    }
+    .post-reactions-icons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.5rem;
+      font-size: 1.15rem;
+      color: #8899a6;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .post-reactions-icons span {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .post-reactions-icons span:hover {
+      color: rgb(29, 68, 242);
+    }
+    .post-reactions-icons i {
+      font-size: 1.2em;
+    }
+
+    /************** NORMAL POST STYLES **************/
+
+    .post {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    }
+    .post-image {
+      margin: 0.7rem 0 0.5rem 0;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+    }
+    .post-image img {
+      max-width: 100%;
+      border-radius: 1rem;
+      display: block;
+      aspect-ratio: 10/12;
+      object-fit: cover;
+    }
+    .post-handle,
+    .post-time {
+      color: #8899a6;
+      font-size: 1rem;
+    }
+  }
+
+  /************  ASIDE  **************/
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-column: 3/4;
+    height: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: 1px solid rgb(230, 230, 230);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+    .likes h2 {
+      color: black;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+    .likes div {
+      display: flex;
+      justify-items: center;
+    }
+    .likes div.title {
+      display: flex;
+      flex-direction: column;
+    }
+    .likes div.title p:nth-child(2) {
+      font-weight: 700;
+    }
+    .likes div.more {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+    }
+    .likes a {
+      margin-top: auto;
+    }
+    .trending {
+      position: sticky;
+      top: 1rem;
+    }
+    .trending h2 {
+      color: black;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+    .trending > div {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .trending div.user_info p:nth-child(1) {
+      font-weight: bold;
+    }
+    .trending button {
+      margin-left: auto;
+      padding: 0 1rem;
+      color: white;
+      background-color: rgb(50, 50, 50);
+      border-radius: 5rem;
+    }
+  }
+}
+/*************** BURGER MENU ***************/
+
+/********** DESKTOP (>=1065px) ************/
+@media (min-width: 1065px) {
+  #site-nav {
+    position: relative;
+    height: 100dvh; /* fill viewport so auto margins can push */
+  }
+  #site-nav .burger-menu {
+    display: none;
+  } /* hide burger on desktop */
+
+  #site-nav .nav-links {
+    /* show full nav on desktop */
+    display: flex;
+    flex-direction: column; /* change to row if you like */
+    position: static;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    justify-content: flex-start; /* keep links at the top */
+    align-items: stretch;
+    min-height: 100%; /* allow bottom items to push down */
+    margin-top: 0; /* override any generic nav div margin */
+  }
+
+  /* push the first bottom block (your Post button wrapper) to the bottom */
+  #site-nav .nav-links > div:first-of-type {
+    margin-top: auto;
+  }
+
+  /* small gap between Post and profile; keep profile at the very bottom */
+  #site-nav .profile-nav {
+    margin-top: 0.75rem;
+  }
+}
+
+/*************** MOBILE (<=1065px) ****************/
+@media (max-width: 1065px) {
+  #site-nav .burger-menu {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: #ffffff; /* icon color */
+    background-color: black;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1301;
+  }
+
+  /* icon swap: X when open */
+  #site-nav .burger-menu .fa-bars {
+    display: inline-block;
+  }
+  #site-nav .burger-menu .fa-xmark {
+    display: none;
+  }
+
+  #site-nav.is-open .burger-menu .fa-bars {
+    display: none;
+  }
+  #site-nav.is-open .burger-menu .fa-xmark {
+    display: inline-block;
+  }
+
+  /* when burger menu is clicked show nav links*/
+  #site-nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 70vw;
+    max-width: 300px;
+    background-color: #fff; /* solid bg so main isn't visible */
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0 1rem 1rem 1rem;
+    overflow: auto; /* scrollbar */
+    transform: translateX(-100%); /* hidden by default */
+    transition: transform 0.22s ease;
+    z-index: 1200; /* below the button */
+  }
+
+  /* Open state */
+  #site-nav.is-open .nav-links {
+    transform: translateX(0);
+  }
+
+  #site-nav.is-open .nav-links {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  #site-nav.is-open .nav-links > a,
+  #site-nav.is-open .nav-links > button,
+  #site-nav.is-open .nav-links > .profile-nav,
+  #site-nav.is-open .nav-links > .more {
+    font-size: 1rem;
+  }
+  #site-nav.is-open .nav-links a i {
+    font-size: 1em;
+  }
+
+  /* Profile block inside the panel */
+  #site-nav .profile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+  #site-nav .profile-nav .avatar {
+    display: block;
+    margin: 0 auto 0.5rem auto;
+  }
+  #site-nav .profile-nav .user_info {
+    text-align: center;
+  }
+
+  #site-nav {
+    --panel-w: min(70vw, 300px); /* match your .nav-links width */
+    --btn-size: 44px; /* burger button size */
+    --pad: 16px; /* padding from the edge */
+  }
+  #site-nav.is-open .burger-menu {
+    left: calc(min(70vw, 300px) - 16px - 44px);
+    top: 16px;
+    background-color: black;
+    z-index: 1302;
+  }
+  #site-nav .burger-menu,
+  #site-nav.is-open .burger-menu {
+    top: 24px;
+  }
+}
