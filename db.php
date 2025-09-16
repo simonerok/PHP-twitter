@@ -3,7 +3,7 @@
 try{
   $dbUserName = 'root';
   $dbPassword = 'password'; // root | admin
-  $dbConnection = 'mysql:host=localhost; dbname=company; charset=utf8mb4'; 
+  $dbConnection = 'mysql:host=mariadb; dbname=company; charset=utf8mb4'; 
   // utf8 every character in the world
   // mb4 every character and also emojies
   $options = [
@@ -19,5 +19,5 @@ try{
   
 }catch(PDOException $ex){
   echo $ex;  
-  exit(); //or die but exit is more formal
+  exit();
 }

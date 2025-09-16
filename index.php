@@ -1,4 +1,9 @@
 <?php
+phpinfo();
+exit();
+?>
+
+<?php
 $title="Welcome";
 require_once __DIR__.'/_header.php';
 ?>
@@ -14,6 +19,8 @@ $letters = ["a", "b", "c"];
         echo "<div> $letter</div>" ;
     }
     ?>
+    <!-- routes -->
+    <a href="login">LOGIN</a>
 
 
 <?php 

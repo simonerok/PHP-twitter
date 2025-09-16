@@ -32,7 +32,8 @@
     <a href=""><i class="fa-solid fa-users"></i> Communities</a>
     <a href=""><i class="fa-solid fa-gem"></i> Premium</a>
     <a href=""><i class="fa-solid fa-circle-check"></i> Verified Orgs</a>
-    <a href=""><i class="fa-regular fa-user"></i> Profile</a>
+    <!-- login -->
+    <a href="login"><i class="fa-regular fa-user"></i>Login</a>
     <a href=""><i class="fa-solid fa-ellipsis"></i> More</a>
     <div>
       <button>Post</button>
