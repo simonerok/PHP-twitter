@@ -6,11 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- autocomplete off the browser not to suggest or autofill previously entered values for the form fields -->
+    
     <form action="bridge-login" method="POST" autocomplete="off">
-        <input type="text" name="userEmail" placeholder="email">
-        <input type="password" name="user_password" placeholder="password">
-        <button>Login</button>
+        <input name="user_email" type="text" placeholder="email">
+        <input name="user_password" type="text" placeholder="password">
+        <button>
+            Login
+        </button>
     </form>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
-<?php
-$user_id = $_POST['user_id'] ?? 'no user id';
+<?php 
+
+$user_id = $_POST["user_id"];
+echo "deleting user with id $user_id";
 
 ?>
-
-Deleting user with id ... <?php echo $user_id; ?>

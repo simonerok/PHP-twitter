@@ -1,4 +1,5 @@
 <form action="bridge-signup" method="POST">
-<input type="text" name="password">
-<button>Sign up</button>
+
+<input name="password" type="text">
+<button>Sign Up</button>
 </form>
