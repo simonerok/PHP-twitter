@@ -10,9 +10,8 @@ burger.addEventListener("click", () => {
 });
 
 /* LIKE AND UNLIKE */
-document.querySelectorAll(".fa-heart").forEach((icon) => {
-  icon.addEventListener("click", function () {
-    this.classList.toggle("fa-regular");
-    this.classList.toggle("fa-solid");
-  });
+const icon = document.getElementById("like-icon");
+icon.addEventListener("click", function () {
+  this.classList.toggle("fa-regular");
+  this.classList.toggle("fa-solid");
 });
