@@ -140,9 +140,9 @@ $users_to_follow = $stmt->fetchall();
 
             </div>
             <hr>
-            <div class="who-to-follow">
-                <h2>Who to follow</h2>
-                <div class="follow-suggestion">
+          
+              
+               
                    
                     <?php
                     foreach($users_to_follow as $user):
@@ -151,8 +151,8 @@ $users_to_follow = $stmt->fetchall();
                     ?>
 
                     <button class="show-more-btn">Show more</button>
-                </div>
-                </div>
+               
+                 
         </aside>
     </div>
 </body>
