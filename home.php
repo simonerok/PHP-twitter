@@ -91,6 +91,7 @@ $users_to_follow = $stmt->fetchall();
                 ?>
                  <?php
                   // <span id="tweet_1_like" class="action like-btn"><i class="fa-regular fa-heart"></i> 87</span>
+                  //<span id="tweet_1_like" mix-get="" href="api-like-tweet" class="action"><i class="fa-regular fa-heart"></i> 87</span>
                ?>
               
                
